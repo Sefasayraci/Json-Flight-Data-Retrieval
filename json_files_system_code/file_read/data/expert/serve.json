@@ -1,0 +1,132 @@
+{
+    "VersionComment": "This file is prepared for the demo application",
+    "RelatedSourceMap": {
+        "zero": 0,
+        "one": 1,
+        "two": 2
+    },
+    "Enums": [
+        {
+            "EnumId": 0,
+            "EnumValues": {
+                "Not Active": 0,
+                "Active": 1
+            }
+        },
+        {
+            "EnumId": 1,
+            "EnumValues": {
+                "Default": 0,
+                "Branch A": 1,
+                "Branch B": 2,
+                "Branch C": 3
+            }
+        }
+    ],
+    "DataList": [
+        {
+            "IcdParameterId": 1,
+            "IrsParameterName": "dec_DemoFloat64_1",
+            "DataType": "float64",
+            "Default": 0.1,
+            "DTSUpdate": true,
+            "GlobalReset": true,
+            "ElectronicsReset": false,
+            "Nvm": false,
+            "Monitor": true,
+            "IsConstantParameter": false,
+            "RelatedSources": [
+                0,
+                1,
+                2
+            ],
+            "IrsParameterId": 1,
+            "IcdParameterName": "dec_DemoFloat64_1",
+            "ParameterRange": {
+                "RangeType": "Value",
+                "MinValue": 0.0,
+                "MaxValue": 82.42
+            },
+            "Direction": "OUTPUT",
+            "Unit": ""
+        },
+        {
+            "IcdParameterId": 2,
+            "IrsParameterName": "dec_DemoFloat64_2",
+            "DataType": "float64",
+            "Default": 0.1,
+            "DTSUpdate": true,
+            "GlobalReset": true,
+            "ElectronicsReset": false,
+            "Nvm": false,
+            "Monitor": true,
+            "IsConstantParameter": false,
+            "RelatedSources": [
+                0,
+                1,
+                2
+            ],
+            "IrsParameterId": 2,
+            "IcdParameterName": "dec_DemoFloat64_2",
+            "ParameterRange": {
+                "RangeType": "Value",
+                "MinValue": 0.0,
+                "MaxValue": 82.42
+            },
+            "Direction": "OUTPUT",
+            "Unit": ""
+        },
+        {
+            "IcdParameterId": 3,
+            "IrsParameterName": "int_DemoInt32",
+            "DataType": "int32",
+            "Default": 5.0,
+            "DTSUpdate": true,
+            "GlobalReset": true,
+            "ElectronicsReset": true,
+            "Nvm": false,
+            "Monitor": true,
+            "IsConstantParameter": false,
+            "RelatedSources": [
+                0,
+                1,
+                2
+            ],
+            "IrsParameterId": 3,
+            "IcdParameterName": "int_DemoInt32",
+            "ParameterRange": {
+                "RangeType": "Value",
+                "MinValue": 0.0,
+                "MaxValue": 100.0
+            },
+            "Direction": "INTERNAL",
+            "Unit": ""
+        },
+        {
+            "IcdParameterId": 4,
+            "IrsParameterName": "bool_DemoBool",
+            "DataType": "bool",
+            "Default": 5.0,
+            "DTSUpdate": true,
+            "GlobalReset": true,
+            "ElectronicsReset": true,
+            "Nvm": false,
+            "Monitor": true,
+            "IsConstantParameter": false,
+            "RelatedSources": [
+                0,
+                1,
+                2
+            ],
+            "IrsParameterId": 4,
+            "IcdParameterName": "bool_DemoBool",
+            "ParameterRange": {
+                "RangeType": "Value",
+                "MinValue": 0.0,
+                "MaxValue": 100.0
+            },
+            "Direction": "INTERNAL",
+            "Unit": ""
+        }
+    ]
+}
