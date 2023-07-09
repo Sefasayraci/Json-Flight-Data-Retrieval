@@ -4,8 +4,8 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-//using JsonConveter;
-//using Json;
+using JsonConveter;
+using Json;
 using System.Windows;
 using System.Windows.Forms;
 using System.IO.Pipes;
@@ -25,10 +25,10 @@ namespace data
 
         private void button1_Click(object sender, EventArgs e) // Seçmeden okuma üst code, alt code seçerek okumadır.
         {
-            /*
+            
             try
             {
-              //  StreamReader oku = new StreamReader(@"C:\Users\sefas\Desktop\mmu.json");
+                StreamReader oku = new StreamReader(@"C:\Users\sefas\Desktop\eklenecek");
                 StreamReader oku = new StreamReader("readfile");
                 richTextBox1.Text = oku.ReadToEnd();
                 oku.Close();
@@ -39,7 +39,7 @@ namespace data
                 MessageBox.Show("dosya okunmadı");
 
             }
-            */
+            
             try
             {
                 openFileDialog1.ShowDialog();
@@ -54,7 +54,7 @@ namespace data
         }
 
         private void button2_Click(object sender, EventArgs e) // JSON to XML Gelecek_Convert_Data
-        {/*
+        {
             try
             {
                 using (Converter converter = new Converter(@"C:\Users\sefas\Desktop\mmu.json"))
@@ -70,7 +70,7 @@ namespace data
             {
                 MessageBox.Show("dosya cevrilmedi");         
             }
-           // XmlDocument doc = (XmlDocument)JsonConvert.DeserializeXmlNode(json);*/
+            XmlDocument doc = (XmlDocument)JsonConvert.DeserializeXmlNode(json);
         }
 
         private void button3_Click(object sender, EventArgs e) // JSON Saved Select
@@ -81,14 +81,14 @@ namespace data
             sw.WriteLine(metin);
             sw.Close();
             MessageBox.Show("Kayıt Başarılı", "Dosya Kayıt İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            /*
+            
             string metin2 = richTextBox2.Text;
             FileStream fileStream2 = new FileStream("sefa2.txt", FileMode.Append, FileAccess.Write);
             StreamWriter sw2 = new StreamWriter(fileStream);
             sw.WriteLine(metin);
             sw.Close();
             MessageBox.Show("Kayıt Başarılı", "Dosya Kayıt İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            */
+            
         }
 
         private void button4_Click(object sender, EventArgs e) // Clear in textbox.rich
@@ -99,8 +99,8 @@ namespace data
             richTextBox3.Clear();
         }
 
-        private void button5_Click(object sender, EventArgs e) // Okuma Kısmı Üst Kısma Geçirildi. Ondan Okunmuyor. Gereksiz
-        {/*
+        private void button5_Click(object sender, EventArgs e) // Okuma Kısmı Üst Kısma Geçirildi.
+        {
             string[] secilendosyayolu;
             openFileDialog1.ShowDialog();
             secilendosyayolu = openFileDialog1.FileNames;
@@ -125,12 +125,12 @@ namespace data
             string filename = openFileDialog1.FileName;
             string readfile = File.ReadAllText(filename);
             richTextBox2.Text = readfile;
-          */
+          
         }
 
         private void button7_Click(object sender, EventArgs e) // JSON List Selected
         {
-           // JsonListe();
+            JsonListe();
         }
 
         private void button6_Click(object sender, EventArgs e)  // XML Saved Select
@@ -154,16 +154,16 @@ namespace data
         }
 
 
-        /*public List<JsonModel> JsonListe()
+        public List<JsonModel> JsonListe()
         {
             List<JsonModel> LsonModelList = null;
             try
             {
                 StreamReader oku = new StreamReader(@"C:\Users\sefas\Desktop\mmu.json"); // deneme için okunmuş dosya çekilmeli
-                //richTextBox1.Text = oku.ReadToEnd();
+                richTextBox1.Text = oku.ReadToEnd();
                 
                 JsonModelList = Newtonsoft.Json.JsonConvert.SerializeObject<List<JsonModel>>(JsonText);
-                //oku.Close();
+                oku.Close();
             }
             catch (Exception)
             {
@@ -172,7 +172,7 @@ namespace data
             }
             return JsonModelList;
         }
-        public class RootoObject // Başlangıç
+        public class RootoObject //başlangıç
         {
 
             public class Rootobject
@@ -202,11 +202,6 @@ namespace data
                 public float MaxValue { get; set; }
             }
             
-        }//bitiş*/
+        }//bitiş
     }
 }
-
-
-// son not bu önemli şimdi bir listeleme seçeneği kaldı bir de json to xml sadece bunlar kaldı bir en son json to xml clear gelir
-// Temiz kod için buton isimleri app kullanışına göre çevir
-// Button 7 ve List Saved kısmında işlem yaptım.
